@@ -1,0 +1,22 @@
+header{
+    top:0;
+}
+
+body {
+    border: solid 1px red;
+
+}
+section{
+    border: solid 1px orange;
+}
+h4{
+    border: solid 1px rgb(17, 0, 255);
+    color:palegreen;
+}
+*{ 
+    color:sienna;
+}
+p{
+    color:black; 
+    
+}
