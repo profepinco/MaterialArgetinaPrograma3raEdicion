@@ -1,0 +1,33 @@
+h2 { color:orange;}
+h1 {background-color: blue;
+    color: yellow!important;}
+section {
+    background: #0FA481;
+    background: -moz-linear-gradient(top, #0FA481 0%, #2388CB 58%, #3F3775 100%);
+    background: -webkit-linear-gradient(top, #0FA481 0%, #2388CB 58%, #3F3775 100%);
+    background: linear-gradient(to bottom, #0FA481 0%, #2388CB 58%, #3F3775 100%);
+}
+
+* {
+    border: 1px red solid;
+    padding: 10px;
+}
+
+body{
+    display: flexbox;
+    justify-content: flex-start;
+}
+
+/*
+ header{
+    position: absolute;
+    top:0;
+}
+*/
+#midiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+    
