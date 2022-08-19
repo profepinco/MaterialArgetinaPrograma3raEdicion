@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>#ArgentinaPrograma</h1>
+            <h1 id="headline">Contador para mi cumpleaños:</h1>
+            <div id="countdown">
+                <ul>
+                    <li><span id="days"></span>Dias</li>
+                    <li><span id="hours"></span>Horas</li>
+                    <li><span id="minutes"></span>Minutos</li>
+                    <li><span id="seconds"></span>Segundos</li>
+                </ul>
+            </div>
+            <div id="content" class="emoji">
+                <span>🥳</span>
+                <span>🎉</span>
+                <span>🎂</span>
+            </div>
+    </div>
+
+    <script>
+        (function () {
+            const second = 1000,
+                minute = second * 60,
+                hour = minute * 60,
+                day = hour * 24;
+
+          //  let birthday = "Sep 29, 2022 00:00:00",
+              let birthday = "Aug 19 2022 00:00:00",
+                countDown = new Date(birthday).getTime(),
+                x = setInterval(function () {
+                    let now = new Date().getTime(),
+                        distance = countDown - now;
+
+                    (document.getElementById("days").innerText = Math.floor(distance / day)),
+                        (document.getElementById("hours").innerText = Math.floor(
+                            (distance % day) / hour
+                        )),
+                        (document.getElementById("minutes").innerText = Math.floor(
+                            (distance % hour) / minute
+                        )),
+                        (document.getElementById("seconds").innerText = Math.floor(
+                            (distance % minute) / second
+                        ));
+
+                    //do something later when date is reached
+                    if (distance < 0) {
+                        let headline = document.getElementById("headline"),
+                            countdown = document.getElementById("countdown"),
+                            content = document.getElementById("content");
+
+                        headline.innerText = "Es tu cumpleaños!";
+                        countdown.style.display = "none";
+                        content.style.display = "block";
+
+                        clearInterval(x);
+                    }
+                    //seconds
+                }, 0);
+        })();
+
+    </script>
+</body>
+
+</html>
